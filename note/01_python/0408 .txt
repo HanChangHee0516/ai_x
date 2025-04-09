@@ -22,4 +22,7 @@ r = raw 데이터
 	print(출력 내용, sep='', end='\n')
 3절 자료형
 	숫자형 : int, float, complex
-		int값
+		int값/int값=>실수
+		지수형 표현(큰수, 작은수)은 => 실수
+	문자형 : str
+		문자열 연산 : +(연결) *(반복)
