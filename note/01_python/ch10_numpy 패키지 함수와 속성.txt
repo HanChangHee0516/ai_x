@@ -1,38 +1,78 @@
 numpy 패키지 함수와 속성
 
 -  배열속성
-   dtype :요소들의 type
-   itemsize : 한 요소의 bytesize
-   ndim : 자원수(축수)
-   size : 배열 요소 갯수
-   shpe : 배열 구조 (튜플)
+    dtype :요소들의 type
+    itemsize : 한 요소의 bytesize
+    ndim : 자원수(축수)
+    size : 배열 요소 갯수
+    shpe : 배열 구조 (튜플)
 
 -----------------------------------------------------------
 
 - 배열 생성 함수
-  np.array(obj, dtype, copy=T)
-  np.array(obj, dtype, copy=T).reshape(구조)
-  np.ones(tup, dtype)
-  np.zeros(tup, dtype)
-  np.full(tup, 초기화)
-  np.empty(tup, dtype)
-  np.rnandom.random(tup) : 0~1 미만 균등분포를 겆는 램덤값
-  np.rnandom.nuifrom(low=0, high=1.0, size=tup) : low부터 high미만의 균등분포를 갖는 램덤값
-  np.random.normal(loc=0, scale=1.0, size=tup) : 평균 loc과 표준편차 scale을 갖는 정규분포 랜덤값
-  np.random.rand(n) : 균등분포의 1차원 난수 배열 발생(난수 n개)
-  np.random.randn(n) : 표준정규분포(평균0, 표준편자1인 정규분포)의 1차원 난수 배열 발생(난수 n개)
-  np.linspace(from, to, count, dtype) : from부터 to까지 cuont개 1차원 배열
-  np.arange(from, stop, step) : from부터 stop까지 step씩 증감하는 1차원 배열
+   np.array(obj, dtype, copy=T)
+   np.array(obj, dtype, copy=T).reshape(구조)
+   np.ones(tup, dtype)
+   np.zeros(tup, dtype)
+   np.full(tup, 초기화)
+
+   np.empty(tup, dtype)
+   np.rnandom.random(tup) : 0~1 미만 균등분포를 겆는 램덤값
+   np.rnandom.nuifrom(low=0, high=1.0, size=tup) : low부터 high미만의 균등분포를 갖는 램덤값
+   np.random.normal(loc=0, scale=1.0, size=tup) : 평균 loc과 표준편차 scale을 갖는 정규분포 랜덤값
+   np.random.rand(n) : 균등분포의 1차원 난수 배열 발생(난수 n개)
+
+   np.random.randn(n) : 표준정규분포(평균0, 표준편자1인 정규분포)의 1차원 난수 배열 발생(난수 n개)
+   np.linspace(from, to, count, dtype) : from부터 to까지 cuont개 1차원 배열
+   np.arange(from, stop, step) : from부터 stop까지 step씩 증감하는 1차원 배열
   
 -----------------------------------------------------------
 
 - 배열 차원 변경
-  reshape()
-  ravel(), flatten() : 1차원 변경
+   resize(tup) : -1 불가
+   reshape([면수,] 행수, 열수) : -1 사용하면 자동 계산
+   ravel(), flatten() : 1차원 변경
+   transpose() , T : 전치행렬
+   ary[:, np.newaxis] == np.expand_dims(ary, axis) : 차원 증가
 
 -----------------------------------------------------------
 
 - 배열 저장 : pkl	npy
 - 딥러닝 모델 저장 : h5	keras
 - 머신러닝 모델 저장 : pkl	joblib
+
+-----------------------------------------------------------
+
+- 배열 연산
+  요소별 연산, 브로드케이스팅
+  행렬연산(2차원) @(dot함수), 단위행렬(정방행렬)
+  범용함수 np.add(), np.multiply(), np.sibstract(), npmsqrt()
+
+-----------------------------------------------------------
+
+- 배열 합치기
+   np.vstack(tup) : 아래로 추가하는 방식
+   np.hstack(tup) : 옆으로 추가하는 방식
+   np.dstack(tup) : 마지막 축(열)을 쌓아 합침(차원증가)
+
+   np.column_stack(tup) : 1차원 배열을 열단위로 배열하여 2차원으로 합침
+   np.column_stack(tup) : 열단위로 합침
+   np.stack(tup, axis=(n)) : axis속성에 따라 배열합침 axis 음수차원 가능
+
+   np.r_[a, b,...] : row단위로 쌓임
+   np.c_[a, b,...] : 컬럼으로 쌓아서 함침
+
+-----------------------------------------------------------
+
+- 배열 분리하기
+   np.vsplit(ary, 정수, 인덱스벡터) == np.split(ary, 정수, 인덱스벡터, axis=0) : 첫번째 축을 따라 분활
+   np.hsplit(ary, 정수, 인덱스벡터) == np.split(ary, 정수, 인덱스벡터, axis=1) : 두번째 축을 따라 분활
+   np.dsplit(ary, 정수, 인덱스벡터) == np.split(ary, 정수, 인덱스벡터, axis=-1)  : depth따라 나눔(3차원 이상에서만 동착)
+   array_split(ary, 갯수나 인뎃벡터, axis) : 나눠지지 않는 정수로도 split 가능
+
+
+
+
+
+
   
