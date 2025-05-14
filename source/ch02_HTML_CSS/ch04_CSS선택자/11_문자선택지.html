@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap{
+            width:750px;
+            margin:0 auto;
+        }
+        #header{
+            text-align:center;
+        }
+        #content {
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+            text-align:justify;
+        }
+        #content p:nth-child(2)::first-line,
+        #content p:nth-child(3)::first-line{
+            font-weight:bold;
+            color:blue;
+        }
+        #content p:nth-child(2):first-letter,
+        #content p:last-child:first-letter{
+            font-size:2.5em;
+        }
+        #footer ul{
+            overflow:hidden;
+        }
+        #wrap ul li {
+            float: left;
+            list-style:none;
+            padding:15px;
+        }
+        #footer ul li:first-child{
+            padding-top:30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>제목이나 회사명</h1>
+        </div>
+        <div id="content">
+            <p>오후에 기온 오름, 덥다</p>
+            <p>
+                Mauris nec ornare enim. Nunc leo ex, dignissim eu libero et, tincidunt rutrum arcu. 
+                Vestibulum est massa, condimentum et orci quis, ultricies sodales tellus. 
+                Sed malesuada nibh vel sollicitudin ornare. 
+                Suspendisse elit ipsum, aliquam vel tempus et, pellentesque et quam. Praesent eu risus ipsum. 
+                Nullam vel elementum tellus. Aenean vitae convallis turpis, in vestibulum magna. 
+                Sed congue, augue sit amet rhoncus interdum, risus ligula accumsan eros, in feugiat purus nisi eget nisi. 
+                Duis in libero neque. Cras vitae laoreet enim. Maecenas molestie purus ornare ex fermentum volutpat. 
+                Etiam molestie nisl vitae nunc tristique faucibus. Cras scelerisque eu massa ut lobortis. 
+                Suspendisse pulvinar mollis lorem vitae scelerisque.
+            </p>
+            <p>
+                공무원의 직무상 불법행위로 손해를 받은 국민은 법률이 정하는 바에 의하여 국가 또는 공공단체에 정당한 배상을 청구할 수 있다. 
+                이 경우 공무원 자신의 책임은 면제되지 아니한다. 
+                혼인과 가족생활은 개인의 존엄과 양성의 평등을 기초로 성립되고 유지되어야 하며, 국가는 이를 보장한다. 
+                여자의 근로는 특별한 보호를 받으며, 고용·임금 및 근로조건에 있어서 부당한 차별을 받지 아니한다. 
+                국가는 모성의 보호를 위하여 노력하여야 한다. 모든 국민은 주거의 자유를 침해받지 아니한다. 
+                주거에 대한 압수나 수색을 할 때에는 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 한다. 
+                의무교육은 무상으로 한다.
+            </p>
+        </div>
+        <div id="footer">
+            <ul>
+                <li><img src="ch04/logo.png" alt="고용부 로고"/></li>
+                <li><img src="ch04/address.png" alt="주소"/></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

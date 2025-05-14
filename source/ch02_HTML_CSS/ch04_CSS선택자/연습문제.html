@@ -1,0 +1,137 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        /* * * 전체 레이아웃 잡기 * * */
+       
+            #header, #content, #footer {
+            width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .left, .right {
+            float: left;
+            width: 150px;
+            height: 150px;
+            background-color: lightgray;
+            border: 1px solid gray;
+        }
+
+        .center {
+            float: left;
+            width: 693px;
+            height: 150px;
+            background-color: lightgray;
+            margin:0px auto;
+            padding:0px;
+            border: 1px solid gray;
+        }
+
+        #content > div {
+            height: 300px;
+        }
+        #nav ul{
+            overflow:hidden;
+        }
+            #nav ul li {
+                float: left;
+                list-style: none;
+                width: 200px;
+                font-size: 20px;
+                text-align: center;
+                
+            }
+                #nav ul li a { /* 밑줄 없애기, 글씨 색상 : 검정*/
+                    text-decoration: none;
+                    color: black;
+                    
+                }
+                #academy h1{
+                    margin:50px 0;
+                    padding:10px 0 ;
+                    text-align:center;   
+                }
+            #content .right ol{
+               margin:1px 0 5px 0;
+            }
+                #content .right ol li:nth-child(10),
+                #content .right ol li:nth-child(11),
+                #content .right ol li:nth-child(12){
+                color:red;
+            }
+         #header .left,
+         #footer .right{
+             border-radius: 20px 0 20px 0;
+         }
+         #header .right,
+         #footer .left{
+             border-radius:0 20px 0 20px;
+         }
+         #header .center{
+             border-radius: 0 0 20px 20px;
+         }
+         #content .left{
+             border-radius:0 20px 20px 0;
+         }      
+         #content .center{
+             border-radius:20px 20px 20px 20px;
+         }
+         #content .right{
+             border-radius:20px 0 0 20px;
+         }
+         #footer .center{
+             border-radius:20px 20px 0 0;
+         }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </div>
+    <div id="content">
+        <div class="left"></div>
+        <div class="center">
+            <div id="nav">
+                <ul>
+                    <li><a href="">menu1</a></li>
+                    <li><a href="">menu2</a></li>
+                    <li><a href="">menu3</a></li>
+                </ul>
+            </div>
+            <div id="academy">
+                <h1>AI개발자 양성과정</h1>
+                <p>
+                    국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호한다.
+                </p>
+            </div>
+        </div>
+        <div class="right">
+            <ol>
+                <li>태그</li>
+                <li>전체(*)</li>
+                <li>id,class</li>
+                <li>속성</li>
+                <li>후손,자손</li>
+                <li>동위</li>
+                <li>반응</li>
+                <li>상태</li>
+                <li>구조</li>
+                <li>문자</li>
+                <li>링크</li>
+                <li>부정</li>
+            </ol>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>
