@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #warp{
+            width:600px;
+            margin:0 auto;
+            border:1px solid gray;
+            text-align:justify;
+            padding:10px;
+        }
+        #warp p:nth-child(2n){
+            background-color:lightblue;
+        }
+        /* em(원 글씨크기의 배수), %(글씨 크기 및 width, heigth ,..), px, pt(3pt가 4px) 
+            pxtoem : https://pxtoem.com.au/
+            pxtopt : https://pixelsconverter.com/px-to-pt
+        */
+        #warp p > span{
+            display:block;  /* display 속성을 block으로 수정하면 block형 태그로 전환 */
+            color:gray;
+            font-size:.5em;
+        }
+        #warp p:nth-child(1){
+            font-size:.8em; /* 원래 사이즈의 0.8배 */
+        }
+        #warp p:nth-child(2){
+            font-size:110%;  /* 문자의 경우 원해 사이즈의 몇 % */
+            /* width, heigth, padding, margin.. 등 길이의 경우 : 부모길이의 몇 % */
+        }
+        #warp p:nth-child(3){
+            font-size:32px;  /* p태그의 기본 사이즈가 16px */
+        }
+        #warp p:nth-child(4){
+            font-size: 18pt;  /* 3pt(글씨 포인트 단위)가 4px */
+        }
+    </style>
+</head>
+<body>
+    <div id="warp">
+        <p>
+            재산권의 행사는 공공복리에 적합하도록 하여야 한다.
+            대통령은 필요하다고 인정할 때에는 외교·국방·통일 기타 국가안위에 관한 중요정책을 국민투표에 붙일 수 있다.
+            모든 국민은 근로의 의무를 진다. 국가는 근로의 의무의 내용과 조건을 민주주의원칙에 따라 법률로 정한다.
+            국정감사 및 조사에 관한 절차 기타 필요한 사항은 법률로 정한다.
+            <span>입력 2025.05.12. 오전 9:45</span>
+        </p>
+        <p>
+            재산권의 행사는 공공복리에 적합하도록 하여야 한다.
+            대통령은 필요하다고 인정할 때에는 외교·국방·통일 기타 국가안위에 관한 중요정책을 국민투표에 붙일 수 있다.
+            모든 국민은 근로의 의무를 진다. 국가는 근로의 의무의 내용과 조건을 민주주의원칙에 따라 법률로 정한다.
+            국정감사 및 조사에 관한 절차 기타 필요한 사항은 법률로 정한다.
+            <span>입력 2025.05.12. 오전 9:45</span>
+        </p>
+        <p>
+            재산권의 행사는 공공복리에 적합하도록 하여야 한다.
+            대통령은 필요하다고 인정할 때에는 외교·국방·통일 기타 국가안위에 관한 중요정책을 국민투표에 붙일 수 있다.
+            모든 국민은 근로의 의무를 진다. 국가는 근로의 의무의 내용과 조건을 민주주의원칙에 따라 법률로 정한다.
+            국정감사 및 조사에 관한 절차 기타 필요한 사항은 법률로 정한다.
+            <span>입력 2025.05.12. 오전 9:45</span>
+        </p>
+        <p>
+            재산권의 행사는 공공복리에 적합하도록 하여야 한다.
+            대통령은 필요하다고 인정할 때에는 외교·국방·통일 기타 국가안위에 관한 중요정책을 국민투표에 붙일 수 있다.
+            모든 국민은 근로의 의무를 진다. 국가는 근로의 의무의 내용과 조건을 민주주의원칙에 따라 법률로 정한다.
+            국정감사 및 조사에 관한 절차 기타 필요한 사항은 법률로 정한다.
+            <span>입력 2025.05.12. 오전 9:45</span>
+        </p>
+    </div>
+</body>
+</html>
