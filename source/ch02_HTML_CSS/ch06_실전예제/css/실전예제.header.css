@@ -1,0 +1,107 @@
+﻿/* css/header.css: 페이지 초기화*/
+@font-face { /* 폰트 설정 */
+    font-family: 'Merriweather-Light';
+    src: url('../font/Merriweather-Light.ttf');
+}
+@font-face {
+    font-family: 'Merriweather-Regular.';
+    src:url('../font/Merriweather-Regular.ttf');
+}
+*{
+    margin:0;
+    padding:0;
+    font-family:Merriweather-Light;
+}
+a{
+    text-decoration:none;
+    display:block; /* a태그를 block타입으로 햐여 영역 확장 */
+    color:black;
+}
+li{
+    list-style:none;
+}
+/* * * header 부분 * * */
+/* * * header.gnb 부분 * * */
+.gnb {
+    min-width:1000px;
+    position: relative;
+    background-color: black;
+}
+    .gnb ul {
+        width: 1000px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+.gnb ul li{
+    float:left;
+    box-sizing:border-box;
+    width:8%;
+    margin: 0 1% 0 1%;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    padding:0 8px;
+}
+.gnb ul li a{
+    color:white;
+}
+/* * * header.logo 부분 * * */
+.logo {
+    width: 100px;
+    margin:30px auto;
+    border: 1px solid gray;
+    font-size: 3em;
+    text-align: center;
+    padding: 20px 40px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight:bold;
+}
+/* * * header.hitmenu 부분 * * */
+.hitmenu {
+    width: 100%;
+    height:40px;
+    margin: 0 auto;
+}
+.hitmenu ul{
+    width:1000px;
+    margin:0 auto;
+}
+.hitmenu ul li{
+    float:right;
+    border:1.5px solid black;
+    padding:8px 30px;
+}
+.hitmenu ul li:first-child{
+    border-radius:0 10px 10px 0;
+}
+.hitmenu ul li:last-child{
+    border-radius:10px 0 0 10px;
+}
+/* * * header.lnb 부분 * * */
+
+.inb {
+    min-width: 1000px;
+    border-top: 2px dotted black;
+    border-bottom: 2px dotted black;
+    margin-bottom:10px;
+    margin-top:5px;
+}
+.inb ul{
+    overflow:hidden;
+    width:1000px;
+    margin:0 auto;
+    
+}
+.inb ul li{
+    width:10.5%;
+    margin:0 1% auto;
+    float:left;
+    height:30px;
+    box-sizing:border-box;
+    font-size:1.2em;
+    text-align:center;
+    line-height:30px;
+    font-weight:bold;
+    
+}

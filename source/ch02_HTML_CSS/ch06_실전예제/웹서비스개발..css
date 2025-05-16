@@ -1,0 +1,110 @@
+﻿*{
+   margin:0 auto;
+   padding:0
+}
+li{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:black;
+    display:block;
+
+}
+body {
+    width: 1000px;
+    margin: 20px auto;
+}
+nav {
+    overflow: hidden;
+    text-align: center;
+}
+    nav ul li {
+        width: 85px;
+        margin: 10px;
+        padding: 5px 10px;
+    }
+#nav_left ul li{
+    float:left;
+}
+#nav_right ul li {
+    float: right;
+}
+#nav_left ul li:first-child {
+    background-color: #c49558 ;
+    border-bottom: 1px solid black;
+}
+#content{
+    overflow:hidden;
+}
+#title p {
+    margin: 0 auto;
+    padding-right: 20px;
+}
+#title {
+    padding:10px;
+    margin-bottom:10px;
+    border-bottom: 1px solid black;
+}
+ 
+#inb{
+    width:150px;
+    margin-left:15px;
+    float:left;
+}
+#inb ul li{
+    padding:2px 30px;
+    line-height:30px;
+    width:200px;
+    height:40px;
+    border:1px solid gray;
+}
+    #inb ul li:nth-child(4) {
+        background-color: #c49558
+    }
+#my_content{
+    width:70%;
+    border:1px solid gray;
+    float:left;
+    margin-left:30px;
+    margin-bottom:30px;
+}
+#sub_title {
+    float:right;
+    width: 70%;
+    height: 30px;
+    line-height:30px;
+    padding-left:10px;
+    border: 1px solid gray;
+    box-sizing:border-box;
+}
+#modify {
+    margin: 30px;
+    text-align: center;
+}
+    #modify td{
+        padding:3px;
+
+    }
+    #modify td:nth-child(2n+1) {
+        text-align: center;
+        width: 200px;
+        height: 20px;
+    }
+    #modify td input:nth-child(n+1) {
+        width: 300px;
+        height: 20px;
+    }
+#modify th {
+    
+}
+footer {
+    width:1000px;
+    background-color: #c49558;
+    height: 30px;
+    margin: 10px;
+    line-height: 30px;
+    text-align: center;
+    border:1px solid gray;
+    box-sizing:border-box;
+}
