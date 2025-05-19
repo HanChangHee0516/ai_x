@@ -1,0 +1,321 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, inital-scale=1.0,
+          maximun-scale=2.0, minimum-scale=0.7, user-scalable=yes"/>
+    <title></title>
+    <style>
+        /* user-scalable=no 의 확대방지가 100% 보장되지 않음 
+        body{
+            touch-action:none;
+            overflow:hidden;
+        } */
+        /* * * 페이지 초기화 * * */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family:'Arial Rounded MT', 'Tempus Sans ITC';
+        }
+        li{
+            list-style:none;
+        }
+        a{
+            text-decoration:none;
+            display:block;
+            color:navy;
+        }
+        /* * * header * * */
+
+        header{
+            background-color:#ea8f00;
+            height:100px;
+        }
+
+        /* * * header의 #logo_warp * * */
+        header #logo_wrap {
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            position:relative;
+        }
+        header #logo_wrap .menu{
+            position:absolute;
+            left:0;
+            top:0;
+        }
+        header #logo_wrap .logo{
+            color:white;
+            font-size:1.5em;
+            font-weight:bold;
+        }
+        header #logo_wrap .myinfo{
+            position:absolute;
+            right:0;
+            top:0;
+        }
+        /* * * header의 #seatch * * */
+
+        header #search{
+            height:50px;
+            position:relative;
+
+        }
+        header #search input[type=text]{
+            
+            width:100%;
+            height:50px;
+            border:3px solid #ea8f00;
+            padding:5px 55px 5px 5px;
+            font-size:1.2em;
+            outline:0;
+            box-sizing:border-box;
+        }
+        header #search input[type=submit] {
+            position: absolute;
+            right: 0;
+            top: 0px;
+            width: 50px;
+            height: 50px;
+            background: url('img/search.png');
+            border: 0;
+        }
+        /* * * #lnb (checkbox가 checked일 때만 보이게) * * */
+        #toggle{
+            display:none;
+        }
+        #toggle:checked ~ #lnb{
+            display:block;
+        }
+        #lnb{
+            margin:7px 0;
+            overflow:hidden;
+            display:none;
+        }
+            #lnb ul li {
+                float: left;
+                width: 16.6%;
+                border-right: 2px solid #ea8f00;
+                box-sizing:border-box;
+                line-height:30px;
+                text-align:center;
+            }
+            #lnb ul li:last-child{
+                border:0;
+            }
+
+        /* * * #section1 * * */
+        #section1{
+            margin:7px 0;
+        }
+            #section1 .row1,
+            #section1 .row2,
+            #section1 .row3{
+                overflow:hidden;
+            }
+                #section1 .row1 > div,
+                #section1 .row2 > div,
+                #section1 .row3 > div{
+                    float:left;
+                    width:50%;
+                    height:120px;
+                    border:2px solid white;
+                    box-sizing:border-box;
+                }
+                #section1 img{
+                    width:100%;
+                    height:120px;
+                }
+                /* * * #section2 * * */
+                    #section2{
+                        margin: 7px;
+                    }
+                    #section2 ul li a{
+                        border:1px solid gray;
+                        padding:7px;
+                        /* 말줄임 태그(ellipsis) */
+                        white-space:nowrap;
+                        overflow:hidden;
+                        text-overflow:ellipsis;
+                        color:black;
+                    }
+
+                /* * * #section3* * */
+                    #section3{
+                        margin:5px 0;
+                    }
+                    #section3 ul li{
+                        border:1px solid gray;
+                        margin:5px;
+                        padding:10px;
+                        position:relative;
+                        height:110px;
+                    }
+                    #section3 ul li p.img{ /* position 으로 뱉=치*/
+                        position:absolute;
+                        left:10px;
+                        top:10px;
+
+                    }
+                        #section3 .img  img{
+                            width: 100px;
+                            height: 100px;
+                        }
+                    #section3 ul li p.txt{ /* 100% 사용(padding-left를 120px 사용 */
+                        padding-left:110px;
+                    }
+                    #section3 ul li p.txt span:first-child{
+                        display:block;
+                        white-space:nowrap;
+                        overflow:hidden;
+                        text-overflow:ellipsis;
+                        color:navy;
+                        font-weight:bold;
+                        font-size:1.3em;
+                    }
+
+                /* * * footer * * */
+                footer {
+                    background-color: #ea8f00;
+                    text-align: center;
+                    object-fit:fill; /* 높이가 120px이하일 경우 120px을 다 채줘서 출력 */
+                }
+                footer p:last-child{
+                    margin-bottom:10px;
+                    font-size:.8em;
+                    color:#222222;
+                }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="toggle" />
+    <header>
+        <div id="logo_wrap">
+            <label for="toggle">
+                <img src="img/menu.png" class="menu"/>
+            </label>
+            <a href="ex.html" class="logo">mobile logo</a>
+            <img src="img/myinfo.png" class="myinfo"/>
+        </div>
+        <div id="search">
+            <form>
+                <input type="text" name="query_world"/>
+                <input type="submit" value=""/>
+            </form>
+        </div>
+    </header> <!-- header 끝 -->
+    <div id="lnb">
+        <ul>
+            <li><a href="#">lnb1</a></li>
+            <li><a href="#">lnb2</a></li>
+            <li><a href="#">lnb3</a></li>
+            <li><a href="#">lnb4</a></li>
+            <li><a href="#">lnb5</a></li>
+            <li><a href="#">lnb6</a></li>
+        </ul>
+    </div><!-- #ind 끝 -->
+    <section>
+        <div id="section1">
+            <div class="row1">
+                <div>
+                    <a href="https://n.news.naver.com/mnews/article/277/0005594172">
+                        <img src="https://imgnews.pstatic.net/image/277/2025/05/18/0005594172_001_20250519083814121.jpg?type=w860" alt="1행1열" />
+                    </a>
+                </div>
+                <div>
+                    <a href="https://n.news.naver.com/mnews/article/092/0002374741">
+                        <img src="https://imgnews.pstatic.net/image/092/2025/05/19/0002374741_001_20250519092110425.jpg?type=w860" alt="1행2열" />
+                    </a>
+                </div>
+            </div>
+            <div class="row2">
+                <div>
+                    <a href="https://n.news.naver.com/mnews/article/119/0002957510">
+                        <img src="https://imgnews.pstatic.net/image/119/2025/05/18/0002957510_001_20250518090010144.jpeg?type=w860" alt="2행1열" />
+                    </a>
+                </div>
+                <div>
+                    <a href="https://n.news.naver.com/mnews/article/092/0002374761">
+                        <img src="https://imgnews.pstatic.net/image/092/2025/05/19/0002374761_001_20250519101016752.jpg?type=w860" alt="2행2열" />
+                    </a>
+                </div>
+            </div>
+            <div class="row3">
+                <div>
+                    <a href="https://n.news.naver.com/mnews/article/421/0008258717">
+                        <img src="https://imgnews.pstatic.net/image/421/2025/05/19/0008258717_001_20250519093712452.jpg?type=w860" alt="3행1열" />
+                    </a>
+                </div>
+                <div>
+                    <a href="https://n.news.naver.com/mnews/article/648/0000036266">
+                        <img src="https://imgnews.pstatic.net/image/648/2025/05/19/0000036266_001_20250519063011471.jpg?type=w860" alt="3행2열" />
+                    </a>
+                </div>
+            </div>
+
+        </div><!-- section1 끝 -->
+        <div id="section2">
+            <ul>
+                <li>
+                    <a href="https://n.news.naver.com/mnews/article/366/0001078210">
+                        [메드테크, 우리가 국대다]④ AI가 임신 성공률 높인다…양질 배아 선별력, 인간의 2배
+                    </a>
+                </li>
+                <li>
+                    <a href="https://n.news.naver.com/mnews/article/366/0001078212">
+                        HBM·D램 가격 줄줄이 인상… 하반기 SK하이닉스는 ‘고점’, 삼성전자는 ‘반등’
+                    </a>
+                </li>
+                <li>
+                    <a href="https://n.news.naver.com/mnews/article/138/0002196818">
+                        [AI웨이브] 비서에서 파트너로…업무 방식, 에이전틱 AI가 바꾼다
+                    </a>
+                </li>
+                <li>
+                    <a href="https://n.news.naver.com/mnews/article/003/0013250181">
+                        KT, 오뚜기와 '와이로운 독립생활' 캠페인 진행, 오뚜기와 콜라보…5만원 상당 간편식 패키지 제공, 자립 시작하는 1인 가구에게 통신·간편식 등 혜택
+
+                    </a>
+                </li>
+            </ul>
+        </div><!-- section2 끝 -->
+        <div id="section3">
+            <ul>
+                <li>
+                    <p class="img"><img src="img/sul.jpg" /></p>
+                    <p class="txt">
+                        <span>
+                            첫번째 span은 말줄임(한줄만 출력되고 나머지 부분은 생략...)을 할 예정입니다.
+                            말줄암 태그를 위해 block타입으로 전환활 예정입니다.
+                        </span>
+                        <span>
+                            두번째 span은 말줄임 안 할 예정입니다. inmline타임 그대로 적용
+                        </span>
+                    </p>
+                </li>
+                <li>
+                    <p class="img"><img src="https://imgnews.pstatic.net/image/477/2025/05/19/0000550837_002_20250519121910386.jpg?type=w647" /></p>
+                    <p class="txt">
+                        <span>
+                            군인 또는 군무원이 아닌 국민은 대한민국의 영역안에서는 중대한 군사상 기밀·초병·초소·유독음식물공급·포로·군용물에 관한 
+                            죄중 법률이 정한 경우와 비상계엄이 선포된 경우를 제외하고는 군사법원의 재판을 받지 아니한다.
+                        </span>
+                        <span>
+                            모든 국민은 인간으로서의 존엄과 가치를 가지며, 행복을 추구할 권리를 가진다. 국가는 개인이 가지는 불가침의 기본적 인권을 확인하고 이를 보장할 의무를 진다.
+                        </span>
+                    </p>
+                </li>
+            </ul>
+
+        </div><!-- section3 끝 -->
+        
+
+    </section><!-- section 끝 -->
+    <footer>
+        <p><img src="img/logo.png" alt="회사로고"/></p>
+        <p>서울시  00구 00동 00빌딩 901호</p>
+    </footer><!-- footer 끝 -->
+
+</body>
+</html>
