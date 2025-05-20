@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        img{
+            width: 300px;
+        }
+    </style>
+    <script>
+        const hous = new Date().getHours();  // 0~23
+        // 0~6시 새벽  07~17 낮 18~23 밤
+        if(hous <= 6){
+            document.write('<h1>조용한 새벽</h1>');
+            document.write('<img src="https://img.freepik.com/free-vector/watercolor-winter-solstice-illustration_23-2149177799.jpg?ga=GA1.1.1743735276.1747720245&semt=ais_hybrid&w=740">');
+        }
+        else if(7<=hous && hous<=17){
+            document.write('<h1>신나는 낮</h1>');
+            document.write('<img src="https://img.freepik.com/free-vector/hand-drawn-spring-wallpaper_23-2148829855.jpg?ga=GA1.1.1743735276.1747720245&semt=ais_hybrid&w=740">');
+        }
+        else{
+            document.write('<h1>조용한 밤</h1>');
+            document.write('img src="https://img.freepik.com/premium-vector/night-forest-dark-starry-background-trees-silhouettes-star-night-background-night-forest_172933-63.jpg?ga=GA1.1.1743735276.1747720245&semt=ais_hybrid&w=740">');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

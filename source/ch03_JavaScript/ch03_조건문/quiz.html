@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        p{
+            text-align: center;
+        }
+    </style>
+    <script>
+        function chk(){
+            if(!frm.num1.value){
+                alert('첫번째 수를 입력');
+                frm.num1.focus()
+                return false;
+            }
+            else if(!frm.num2.value){
+                alert('두번째 수를 입력');
+                frm.num2.focus()
+                return false;
+            }
+
+        let su1 = Number(frm.num1.value);
+        let su2 = Number(frm.num2.value);
+        let dif = su1>su2 ? su1-su2 : su2-su1;
+        let temp;
+        if(su1>su2){
+            temp = '<p> 첫번째수가 ' + dif + ' 큽니다 </p> ';
+        }
+        else if(su2>su1){
+            temp = '<p> 두번째수가 ' + dif + ' 큽니다 </p> ';
+        }
+        else{
+            temp = '<p> 두 수가 같습니다'};
+        
+        alertFrm = temp.replace('<p>','').replace('</p>','');
+        document.body.innerHTML += temp;
+        frm.num1.value = su1;
+        frm.num2.value = su2;
+        alert(alertFrm);
+        }
+    </script>
+</head>
+<body>
+    <form name="frm" onsubmit="return chk()">
+        <fieldset>
+            <p>
+                <label for="num1">첫번째수</label>
+                <input type="number" name="num1" id="num1"/>
+            </p>
+            <p>
+                <label for="num2">두번째수</label>
+                <input type="number" name="num2" id="num2"/>
+            </p>
+            <p>
+                <p><input type="submit" value="결과"/></p>
+            </p>
+        </fieldset>
+    </form>
+
+</body>
+</html>
