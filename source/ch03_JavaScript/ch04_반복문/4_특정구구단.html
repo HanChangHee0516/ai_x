@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        table{
+            margin: 0 auto;
+        }
+        td:last-child{
+            text-align: right;
+        }
+    </style>
+    <script>
+        // prompt 함수를 이용하여 원하는 구구단을 입력받아 해당 구구단을 출력
+        do{
+            var i = parseInt(prompt('원하는 구구단의 단수를 입력하시오', '2'));
+        }
+        while(isNaN(i) || i<2);
+        document.write('<table>');
+        for(a=1 ; a<=9; a++){
+            document.write('<tr><td>' + i + 'X' + a + ' = </td>' + '<td>' + i*a + '</td></tr>');
+        }
+        document.write('</table>');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
