@@ -24,27 +24,62 @@ outline: 1px solid #385d81;
         var patternNum = /[0-9]/;
         var patternName = /^[가-힣]{2,}$/;
         var patterEng = /[a-zA-Z]/;
-        var patternEmail = /^[a-zA-Z0-9]@[a-a-zA-Z0-9].[a-zA-Z]{1,2}&/;
+        var patternEmail = /^[a-zA-Z0-9\.]+@[a-zA-Z0-9]+(\.[a-z]+){1,2}$/; // macth함수 사용
         var patternSpc = /[~`!@#$%^&*()_\-+=\|\\\[\]{}'":;?\/<>,\.]/;
 
         const joinCheck = () => {
             let name = frm.name.value.trim();
-            let mali = frm.mali.value.trim();
+            let mail = frm.mail.value.trim();
             let pw = frm.pw.value.trim();
             let pwChk = frm.pwChk.value.trim();
 
 
             if(!name){
                 alert('이름은 필수 입력사항입니다');
+                frm.name.focus();
                 return false;
             }
-            else if(name <2){
+            else if(patternNum.test(name) || patternSpc.test(name) || patterEng.test(name)){
+                alert('이름을 확인 하세요. 이름에는 영어, 숫자, 특수문자의 사용이 불가합니다.');
+                frm.name.focus();
+                return false;
+            }
+            else if(name.length <2){
                 alert('이름은 2글자 이상입니다');
+                frm.name.focus();
                 return false;
             }
-            else if (name == patternName){
-                
+            else if (!mail){
+                frm.mail.focus();
+                alert('메일은 필수 입력사항입니다');
+                return false;
             }
+            else if(!mail.match(patternEmail)){
+                alert(mail);
+                alert('메일의 형식을 확인하세요');
+                frm.mail.focus();
+                return false;
+            }
+            else if(!pw){
+                alert('비밀번호는 필수 입력사항입니다');
+                frm.pw.focus();
+                return false;
+            }
+            else if(pw != pwChk){
+                alert('비밀번호가 일치하지 않습니다');
+                frm.pw.focus();
+                return false;
+            }
+            else if(
+                !patternNum.test(pw) ||
+                !patterEng.test(pw) ||
+                !patternSpc.test(pw) ||
+                pw.length < 4){
+                alert('비밀번호는 숫자, 알파벳, 특수기호를 모두 포함한 4글자 이상입니다');
+                frm.pw.focus()
+                return false;
+            }
+            return true;
         }
 </script>
 </head>

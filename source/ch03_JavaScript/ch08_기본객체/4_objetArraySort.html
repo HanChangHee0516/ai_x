@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+        // 생성자 함수
+        function Student(name, kor, mat){
+            this.name = name;
+            this.kor = kor;
+            this.mat = mat;
+        }  
+        // Student 생성자 함수
+        // Student 타입의 함수를 prototype에 추가
+        Student.prototype.getSum = function(){
+            return this.kor + this.mat;
+        };
+        Student.prototype.toString = function(){
+            let output = '';
+                for(let key in this){
+                    if(key != 'toString' && key != 'getSum'){
+                        output += key + ' : ' + this[key] + ' ';
+                    }
+                    else if(key == 'getSum'){
+                        output +=key.substring(3).toLowerCase() + ' : ' + this[key]() + ' ';
+                    } //if
+                } // for
+                return output;
+        };
+        var student = [new Student('홍길동', 99, 95),
+                        new Student('마길동', 94, 98),
+                        new Student('김길동', 90, 91),
+                        new Student('박길동', 97, 97),
+                        new Student('이길동', 91, 85),
+        ];
+        document.writeln('<h3>정렬 전</h3');
+        student.forEach(data => document.writeln(data + '<br>'));
+        student.sort(); // 
+        document.writeln('<h3>ASCII 코드로 정렬 후</h3');
+        student.forEach(data => document.writeln(data + '<br>'));
+        student.sort((left, rigth)=>{
+            return rigth.getSum() - left.getSum();
+        });
+        document.writeln('<h3>정렬후(총점 내림차순 정렬)</h3');
+        student.forEach(data => document.writeln(data + '<br>'));
+        // 수학점수 기준 오름차순 정렬
+        students.sort( (left, right) => {
+            return left.mat - right.mat;
+        });
+        document.writeln('<h3>정렬후(수학점수 오름차순 정렬)</h3>');
+        students.forEach(data => document.writeln(data +'<br>'));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
