@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <style>
+    table{width:500px; margin: 10px auto; background-color: darkgreen;}
+    td{background-color: white; padding: 50px; text-align: center;}
+    
+    </style>
+    <script>
+        let lastCell = null;
+        window.onkeyup = () => {
+            let key = event.keyCode;
+            let num = null;
+            let color = '';
+            if(96<= key && key<=105){
+                num = key-96;
+                color = 'red';
+            }
+            else if(48 <= key && key <= 57){
+                num = key - 48;
+                color = 'orange';
+            } 
+            if(num != null){
+                let td = document.querySelectorAll('td');}
+            if(lastCell != null){
+                lastCell.style.backgroundcolor = 'whith';
+            }
+            }
+
+    </script>
+</head>
+<body>
+    <table>
+    <tr><td>0</td><td>1</td><td>2</td></tr>
+    <tr><td>3</td><td>4</td><td>5</td></tr>
+    <tr><td>6</td><td>7</td><td>8</td></tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        div{width:400px; height: 200px;  margin:0 auto; border:1px solid blue; text-align:center;}
+        h1{margin:30px 0; font-size: 2.2em; }
+        table{
+            margin: 30px;
+        }
+        button{
+            width: 80px;height: 40px; font-size: 1.2em;
+        }
+    </style>
+    <script>
+        function naver(){
+            window.location.href = 'https://www.naver.com';
+        }
+        function daum(){
+            window.location.href = 'https://www.daum.net';
+        }
+        function google(){
+            window.location.href = 'https://www.google.com';
+        }
+        function youtube(){
+            window.location.href = 'https://www.youtube.com';
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <h1>quiz2. 메뉴</h1>
+        <table>
+            <tr>
+                <td><button onclick="naver()">네이버</button></td>
+                <td><button onclick="daum()">다음</button></td>
+                <td><button onclick="google()">구글</button></td>
+                <td><button onclick="youtube()">유튜브</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

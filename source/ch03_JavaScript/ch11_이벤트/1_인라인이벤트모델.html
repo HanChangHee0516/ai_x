@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        h1{
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        const whenclick = () => {
+            alert('click 했습니다');
+            var h1 = document.querySelector('h1');
+            h1.innerHTML = 'click 했군요';
+            h1.style = 'color:green';
+            // h1.style.color = 'yellow';
+            
+        };
+    </script>
+</head>
+<body>
+    <h1 onclick="whenclick()">click 해봐</h1>
+</body>
+</html>
