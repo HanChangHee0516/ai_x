@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $('p').click(function(){
+            // 'p' 선택자자 click되었을 때
+            $(this).html('<b>태그 내용이 html에 적용되어 바뀜</b>')
+            // $(this).text('<b>태그 내용안에 text 사입</b> ');
+            $(this).css('background-color', 'green').css('color','yellow');
+        });
+        });
+    </script>
+</head>
+<body>
+    <p id="p1">click 해 봐</p>
+</body>
+</html>
