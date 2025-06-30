@@ -25,8 +25,8 @@ def main():
     text = st.text_area("요약할 글을 입력하세요")
     if st.button("요약"):
         prompt = f"""your task is to summarize the text sentences in Korean language.
-                  Summarize in 1 lines. use the format of a bullet point.
-                  text : {text}"""
+                Summarize in 1 lines. use the format of a bullet point.
+                text : {text}"""
         result = askGpt(prompt=prompt)
         st.info(result)
 if __name__ == "__main__":
