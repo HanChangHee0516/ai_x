@@ -1,0 +1,81 @@
+
+HTML-II 핵심 요약 정리본 (아이콘 없음 버전)
+
+1. HTML 핵심 구조 복습
+모든 HTML은 아래처럼 구성됨:
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head> ... </head>
+  <body> ... </body>
+</html>
+
+- head 안에는 설정 정보 (meta, title, style 등)
+- body 안에는 사용자에게 보이는 콘텐츠
+
+2. 글자 관련 태그 정리
+
+태그         설명
+<h1>~<h6>    제목 태그. 숫자가 클수록 글자가 작아짐
+<p>          문단 구분. 자동 줄바꿈 포함
+<br>         줄바꿈. 문단 구분 없이 한 줄만 바꿈
+<b>          굵은 글씨
+<i>          기울임 글씨
+<sup>        위첨자 (예: 10^2^)
+<sub>        아래첨자 (예: H₂O)
+<del>        취소선
+<a>          하이퍼링크 (href 속성으로 링크 대상 지정)
+<pre>        줄바꿈/공백 유지된 코드 블록
+id           특정 요소에 이름을 붙여 내부 이동 가능
+
+3. 목록 태그 정리
+
+<ul>  : 순서 없는 목록 (원형 등)
+<ol>  : 순서 있는 목록 (숫자/알파벳)
+<li>  : 목록 항목 (list item)
+
+속성 예시:
+<ul type="square">, <ol type="A" start="2">
+
+4. 표 (table) 태그 정리
+
+<table>   : 표 전체
+<tr>      : 행(Row)
+<th>      : 제목 셀
+<td>      : 일반 셀
+<caption> : 표 제목
+rowspan / colspan : 셀 병합
+<thead>, <tbody>, <tfoot> : 구조적 구분
+
+5. 이미지 태그
+
+<img src="이미지경로" alt="대체텍스트" width="100" height="100">
+
+- src: 이미지 경로
+- alt: 이미지가 안 뜰 때 대체 텍스트
+- width, height: 크기 조정 (보통 CSS로 처리)
+
+6. 오디오 태그 (HTML5)
+
+<audio src="파일" controls autoplay loop preload="auto"></audio>
+
+속성:
+controls - 재생 도구 표시
+autoplay - 자동 재생
+loop     - 반복 재생
+preload  - 미리 불러올지 여부
+
+<source> 사용도 가능
+
+7. 비디오 태그 (HTML5)
+
+<video src="video.mp4" controls autoplay loop width="300" height="200" poster="image.jpg"></video>
+
+속성:
+controls - 재생 도구 표시
+autoplay - 자동 재생
+loop     - 반복 재생
+poster   - 재생 전 미리보기 이미지
+width, height - 크기 지정
+
+<source> 태그로 다중 포맷 지원 가능

@@ -1,0 +1,67 @@
+
+CSS 속성들 핵심 요약 정리본
+
+1. CSS 단위
+- px: 고정 픽셀 단위
+- em: 부모 요소의 글꼴 크기 기준 비율
+- %: 부모 요소 기준 비율
+- pt: 포인트 (출력용 문서에서 사용)
+
+2. 배경 이미지
+- background-image: url("경로") → 배경 이미지 설정
+- background-repeat: 반복 여부 설정
+- background-size, background-position 등도 자주 사용됨
+
+3. display 속성
+- block: 줄 바꿈 발생, 높이 지정 가능 (div, p 등)
+- inline: 줄 바꿈 없음, 높이 지정 불가 (span 등)
+- inline-block: inline처럼 붙되, block처럼 크기 지정 가능
+- none: 해당 요소를 화면에서 제거
+
+4. visibility vs display
+- visibility: hidden → 공간은 유지, 안 보임
+- display: none → 공간도 사라짐
+
+5. opacity
+- 0 ~ 1 사이의 값으로 투명도 조절 (0 = 완전투명)
+
+6. margin / padding
+- margin: 요소 바깥 여백
+- padding: 요소 안쪽 여백
+- 방향 순서: top, right, bottom, left
+
+7. box-sizing
+- content-box (기본값): width는 내용만 포함
+- border-box: padding과 border까지 포함한 전체 width로 계산
+
+8. border 속성
+- border-width / style / color 각각 설정 가능
+- 단축 속성: border: 1px solid red;
+
+9. 글자 관련 속성
+- font-family: 글꼴 설정 (웹폰트, 로컬폰트, 시스템폰트)
+- font-size, font-weight, font-style, line-height
+- text-align: left, center, right
+- text-decoration: underline, none 등
+
+10. 웹폰트 사용
+- @font-face로 직접 경로 지정
+- 구글폰트: 링크 삽입 후 font-family 사용
+
+11. position 속성
+- static: 기본값
+- relative: 자신의 위치 기준으로 이동
+- absolute: 가장 가까운 relative 조상 기준 위치 지정
+- fixed: 화면에 고정 (스크롤에도 위치 고정)
+
+12. z-index
+- position이 있는 요소에만 적용 가능
+- 숫자가 클수록 위에 쌓임
+
+13. float
+- 요소를 왼쪽(left) 또는 오른쪽(right)으로 띄움
+- float 해제는 clear 또는 overflow:hidden 사용
+
+14. 정렬 팁
+- 수평 정렬: text-align: center
+- 수직 정렬: line-height를 height와 같게 설정 (단순한 경우에만)

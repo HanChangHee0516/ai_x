@@ -1,0 +1,51 @@
+
+웹페이지 실전 요약 정리본
+
+1. 웹페이지 레이아웃 개념
+
+- 웹페이지는 보통 다음과 같은 구조로 구성됨:
+  [ header ] + [ content ] + [ footer ]
+
+2. 전체 구성 요소
+
+header 영역:
+- .gnb: 글로벌 네비게이션 바 (상단 메뉴)
+- .logo: 사이트 로고
+- .hitmenu: 인기 검색어 또는 추천 메뉴
+- .lnb: 로컬 네비게이션 바 (하위 메뉴)
+
+content 영역:
+- .section1: 슬라이드 배너와 사이드 배너로 구성
+  - .slide_banner: 메인 슬라이더 (광고/이미지)
+  - .side_banner: 오른쪽 사이드 배너
+- .section2: 상품 목록
+  - .hit_product: 인기 상품
+  - .md_product: MD 추천 상품
+
+footer 영역:
+- .office_logo: 회사 로고
+- .office_address: 회사 주소
+- .shopping_info: 쇼핑몰 이용 정보
+- .copyright: 저작권 정보
+
+3. 레이아웃 수치
+
+- 전체 width 기준: 1000px
+- section1 내부 분할:
+  - .slide_banner: 700px
+  - .side_banner: 300px
+- section2 내부 분할:
+  - .hit_product: 400px
+  - .md_product: 400px
+- 각 사이 여백(margin): 30px 또는 10px
+
+4. 비율 기반 크기 예시
+
+- 요소 간 여백: 약 0.8%
+- 주요 블록 비율: 24% 또는 고정 px
+
+5. 기타 UI 요소
+
+- 슬라이드 구성 예시:
+  - 슬라이드1 / 슬라이드2 / 슬라이드3 등 순환형 이미지 또는 텍스트 콘텐츠
+

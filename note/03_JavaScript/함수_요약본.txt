@@ -1,0 +1,93 @@
+■ 1. 함수란?
+- 코드의 집합 (재사용 가능)
+- 호출 방식: 함수명() 또는 변수에 할당 후 호출
+
+■ 2. 함수의 종류
+1) 선언적 함수
+    - 형식: function 함수명() { ... }
+    - 스크립트가 실행되기 전에 미리 등록됨 (호이스팅)
+
+2) 익명 함수
+    - 이름 없는 함수, 변수에 저장해서 사용
+    - var func = function() { ... };
+
+3) 화살표 함수 (ES6)
+    - () => { ... }
+    - 중괄호와 return 생략 가능 (한 줄 반환 시)
+
+■ 3. 매개변수 & 리턴값
+- function fn(x, y) { return x + y; }
+- return 없이도 함수는 동작 가능 (undefined 반환)
+- 매개변수를 많이 주면 초과값 무시 / 적게 주면 undefined
+
+■ 4. 가변 인자 함수
+- arguments 객체 사용
+- 전달된 인자의 수와 값 활용 가능
+
+예시:
+function arrayFun() {
+  if (arguments.length == 0) alert('매개변수 없음');
+  else alert('입력값: ' + arguments[0]);
+}
+
+■ 5. 내부 함수
+- 함수 안에서 정의된 함수
+- 외부와 충돌 방지에 효과적
+
+예시:
+function outer() {
+  function inner() { ... }
+  inner();
+}
+
+■ 6. 콜백 함수
+- 함수의 매개변수로 전달되는 함수
+- 자주 사용되는 고차함수 패턴
+
+예시:
+function repeat(callback) {
+  for (let i = 0; i < 10; i++) callback();
+}
+repeat(() => alert('Hello'));
+
+■ 7. 클로저 함수
+- 함수가 종료된 이후에도 지역변수를 기억함
+- 함수를 리턴하는 함수
+
+예시:
+function test(name) {
+  var output = "Hello " + name;
+  return function () { alert(output); }
+}
+const greet = test("홍길동");
+greet(); // "Hello 홍길동"
+
+■ 8. 내장함수
+- JavaScript에 기본으로 포함된 함수
+
+타이머 함수:
+- setTimeout(fn, ms): 일정 시간 후 1회 실행
+- setInterval(fn, ms): 일정 시간마다 반복 실행
+- clearTimeout(id), clearInterval(id): 중지
+
+■ 9. 배열 관련 Array 함수
+- Array(): 빈 배열
+- Array(n): 길이 n인 빈 배열
+- Array(a, b, c): a, b, c 요소 포함 배열
+
+예시:
+let arr1 = Array();        // []
+let arr2 = Array(5);       // [ <5 empty items> ]
+let arr3 = Array(1, 2, 3); // [1, 2, 3]
+
+
+■ 11. 타이머 함수 실행 순서 주의
+alert("A");
+setTimeout(() => alert("B"), 0);
+alert("C");
+// 실행 순서: A → C → B
+
+---
+참고 사이트
+- https://www.w3schools.com/jsref
+- http://devdocs.io/javascript

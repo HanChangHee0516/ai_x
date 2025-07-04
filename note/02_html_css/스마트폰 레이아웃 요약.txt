@@ -1,0 +1,45 @@
+1. Viewport (뷰포트)
+모바일 브라우저에서 화면 크기를 제어하기 위한 설정
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+주요 속성
+-. width: 보통 device-width 사용
+-. initial-scale: 초기 배율
+-. user-scalable: 확대/축소 가능 여부
+-. minimum-scale, maximum-scale: 확대/축소 한계
+
+2. 레이아웃 구성 요소
+
+header 영역
+-. #logo_wrap:
+  -. img.menu (메뉴 버튼)
+  -. a.logo (로고 링크)
+  -. img.myinfo (마이페이지/회원정보)
+-. #lnb: 로컬 내비게이션 메뉴
+  -. section (본문) 영역
+
+-. #section1:
+  -. row1, row2, row3
+  -. row3 안에는 div 2개 포함
+
+-. #section2:
+  -. ul > li > a 구조
+  -. 기사 링크 4개 배치
+
+-. #section3:
+  -. ul > li > p.img + p.txt
+  -. p.txt에는 말줄임 span + 하단 정보 span 포함
+
+-. footer 영역
+  -. <footer> 안에 <p> 태그 2개로 구성
+
+-. 검색창
+  -. #search:
+    -. input[type="text"]
+    -. img 또는 input[type="submit"]
+
+3. 모바일 구조 설계 팁
+ -. 한 줄에 하나씩 구성 (수직 방향 우선)
+ -. 반복 콘텐츠는 ul > li로 구성
+ -. 가로 제한은 viewport + CSS에서 처리
+ -. flex 또는 grid로 구성하면 더 유연한 대응 가능

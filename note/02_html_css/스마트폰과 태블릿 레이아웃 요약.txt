@@ -1,0 +1,40 @@
+1. Viewport 설정
+
+-. 모바일 브라우저에서 웹페이지가 기기 너비에 맞게 보이도록 설정
+  -. <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+-. 속성들:
+  -. width: 보통 device-width 사용
+  -. height: 높이 설정
+  -. initial-scale: 초기 배율
+  -. user-scalable: 확대/축소 가능 여부
+  -. minimum-scale, maximum-scale: 축소/확대 범위 제한
+
+2. 전체 페이지 구조
+
+-. header
+  -. #logo_wrap: 메뉴 버튼(img), 로고(a), 사용자정보(img)
+  -. #search: 텍스트 input + 검색 버튼 이미지
+
+-. lnb
+  -. <ul><li><a></a></li></ul> 구조로 6개 메뉴
+
+-. section
+  -. #section1:
+    -. .row1 ~ .row3: 각 행마다 이미지 2개씩 (50% 너비, float 사용)
+  -. #section2:
+    -. <ul><li><a>기사 링크</a></li></ul> 형식 4개
+    -. 말줄임 처리(text-overflow: ellipsis) 포함
+  -. #section3:
+    -. <ul><li><p class="img">이미지</p><p 	class="txt"><span>제목</span><span>내용</span></p></li></ul>
+    -. 텍스트 말줄임 처리 포함
+
+-. footer
+  -. <footer><p>로고 이미지</p><p>회사 주소</p></footer>
+
+3. 핵심 스타일 요약
+-. float: 이미지 및 콘텐츠 정렬
+-. box-sizing: border-box: 여백 포함한 전체 크기 계산
+-. white-space: nowrap, text-overflow: ellipsis: 말줄임 표시
+-. overflow: hidden: float 해제 및 콘텐츠 넘침 방지
+-. 초기화 스타일(* { margin: 0; padding: 0; })도 중요

@@ -1,0 +1,69 @@
+■ 1. if 조건문
+- 기본 형태:
+    if (조건식) {
+        실행문;
+    }
+
+- if ~ else:
+    조건이 참이면 if 실행, 거짓이면 else 실행
+
+- if ~ else if ~ else:
+    여러 조건을 순차적으로 체크할 때 사용
+
+- 중첩 조건문:
+    if 안에 또 if를 넣어 사용하는 방식 (조건이 복잡할 때 사용)
+
+예시:
+var hour = new Date().getHours();
+if (hour < 12) {
+    alert("상쾌한 오전입니다");
+} else {
+    alert("따스한 오후입니다");
+}
+
+■ 2. switch 조건문
+- 여러 경우(case)를 비교하고 처리할 때 사용
+- 반드시 각 case 뒤에 `break` 필요 (탈출문)
+- default는 일치하는 case가 없을 때 실행
+
+예시:
+var input = Number(prompt("숫자 입력"));
+switch (input % 2) {
+    case 0: alert("짝수"); break;
+    case 1:
+    case -1: alert("홀수"); break;
+    default: alert("수가 아닌 듯");
+}
+
+요일별 배경색 바꾸기 예시:
+var week = new Date().getDay();
+switch (week) {
+    case 0: document.body.style = "background-color:#ff0000"; break; // 일
+    case 1: document.bgColor = "orange"; break; // 월
+    case 2: document.bgColor = "yellow"; break; // 화
+    case 3: document.bgColor = "green"; break; // 수
+    case 4: document.bgColor = "blue"; break; // 목
+    case 5: document.bgColor = "navy"; break; // 금
+    case 6: document.bgColor = "purple"; break; // 토
+}
+
+■ 3. 삼항 연산자
+- 형식:
+  (조건식) ? 참일 때 실행 : 거짓일 때 실행;
+
+예시:
+var result = (score >= 60) ? "합격" : "불합격";
+
+■ 4. 비교 연산자
+- == : 값만 비교
+- === : 값 + 자료형 모두 비교 (더 엄격함)
+
+■ 5. 내장 객체 개요
+- document : 웹 페이지 제어 (write, bgColor 등)
+- Date : 날짜와 시간 정보 처리 (getDay, getHours 등)
+- Math : 수학 관련 처리 (Math.random, Math.round 등)
+
+
+참고 사이트
+- https://www.w3schools.com/jsref
+- http://devdocs.io/javascript
