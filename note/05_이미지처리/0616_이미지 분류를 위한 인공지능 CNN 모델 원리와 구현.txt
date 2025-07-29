@@ -1,0 +1,66 @@
+
+[이미지 분류를 위한 인공지능 CNN 모델 원리와 구현 요약]
+
+1. 실습 환경
+- Anaconda 설치 (Windows 10, 11 GPU 환경 안내)
+- pip로 TensorFlow 설치, 또는 Google Colab 사용 가능
+- Colab에서 한글 그래프 사용 시: !sudo apt-get install -y fonts-nanum
+
+2. 딥러닝 프레임워크
+- Keras: 직관적이고 쉬운 고수준 API, TensorFlow와 통합
+- PyTorch: 유연하고 연구에 적합, 커스텀에 용이
+
+3. 텐서플로우 케라스 주요 클래스 및 기능
+- Sequential: 순차적 층 쌓기, 직관적
+- Functional API: 다중입력/출력 등 복잡한 신경망 구현
+- layers: Dense(완전연결), Conv2D(합성곱), MaxPooling2D(풀링) 등
+- losses: 손실 함수(categorical_crossentropy 등)
+- optimizers: Adam, SGD, RMSprop 등
+- metrics: 정확도, 정밀도 등
+
+4. 합성곱 신경망(CNN) 기본 구조
+- Convolution Layer: 이미지에서 특징 추출
+- Pooling Layer: 차원 축소(주로 Max Pooling)
+- Fully Connected Layer: 최종 분류 담당
+
+5. 주요 개념 정리
+- 필터/커널: 이미지에서 특정 특징(모서리, 흐림 등)을 추출
+- Zero Padding: 경계 정보 보존을 위해 주변을 0으로 채움
+- 스트라이드: 필터가 움직이는 보폭
+- 활성화 함수: relu, softmax 등
+- 손실 함수: crossentropy(분류), MSE(회귀)
+- 원-핫 인코딩: 다중 클래스 정답을 벡터로 변환
+
+6. 예제 - MNIST 손글씨 숫자 인식 CNN 모델 (Keras)
+(1) 데이터 준비
+from tensorflow.keras.datasets import mnist
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
+X_train = X_train.reshape(-1, 28, 28, 1) / 255.0
+X_test = X_test.reshape(-1, 28, 28, 1) / 255.0
+
+(2) 모델 정의
+from tensorflow.keras import Sequential, layers
+model = Sequential([
+    layers.Input(shape=(28,28,1)),
+    layers.Conv2D(32, (3,3), activation='relu'),
+    layers.MaxPooling2D(),
+    layers.Dropout(0.1),
+    layers.Conv2D(64, 3, activation='relu'),
+    layers.MaxPooling2D(),
+    layers.Dropout(0.25),
+    layers.Flatten(),
+    layers.Dense(128, activation='relu'),
+    layers.Dropout(0.5),
+    layers.Dense(10, activation='softmax')
+])
+
+(3) 컴파일/학습/평가
+model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+model.fit(X_train, y_train, batch_size=128, epochs=10)
+loss, accuracy = model.evaluate(X_test, y_test)
+print('Test loss:', loss, 'Test accuracy:', accuracy)
+
+7. 참고 개념
+- 채널 순서: TensorFlow(Keras)는 channel-last, PyTorch는 channel-first
+- Residual block: skip connection 구조도 가능
+

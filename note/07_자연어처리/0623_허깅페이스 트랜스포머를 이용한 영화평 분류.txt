@@ -1,0 +1,46 @@
+
+[허깅페이스 트랜스포머를 이용한 영화평 분류 요약]
+
+1. 순환신경망(RNN), LSTM, GRU, Seq2Seq
+- RNN: 시계열, 순차 데이터를 위한 딥러닝 구조(입력과 출력의 시퀀스 특성)
+- LSTM: RNN의 단기 기억력 한계를 보완, 게이트 구조로 장기 정보 전달 가능
+- GRU: LSTM 구조를 단순화, 연산 속도 향상
+- Seq2Seq: 인코더-디코더 구조로 입력 시퀀스를 다른 시퀀스로 변환(번역 등)
+
+2. 어텐션 메커니즘
+- 입력 시퀀스를 하나의 벡터로 압축할 때 정보 손실, 경사소실 등 RNN의 한계 극복
+- 어텐션은 입력의 모든 단어 쌍 간 중요도를 계산, 각 단어가 얼마나 중요한지 동적으로 결정
+- Self-Attention은 각 단어가 문맥 내 다른 단어와 얼마나 연관있는지 계산(Transformer 핵심)
+
+3. 트랜스포머(Transformer) 모델
+- 2017년 구글이 발표, RNN 계열의 순차 처리 한계를 극복
+- 인코더(입력→임베딩→Self-Attention)와 디코더(출력 생성을 위한 구조)로 구성
+- Positional Encoding: 위치 정보를 임베딩에 더해 순서 정보를 보존
+- Multi-head Attention: 여러 관점에서 문맥 파악, 병렬처리로 빠른 학습 가능
+- 주요 구조: Self-Attention, Multi-head Attention, 잔차연결(Residual), 정규화(Normalization), FFN(Feed Forward Network)
+
+4. 허깅페이스 Transformers 라이브러리
+- 다양한 사전학습 트랜스포머 모델(BERT, GPT, RoBERTa 등) 제공
+- PyTorch, TensorFlow 양쪽 지원, 초보자도 쉽게 사용 가능한 Python API
+- Model Hub(https://huggingface.co/)에서 미리 학습된 모델을 다운로드/공유 가능
+- 감정분석, 번역, 요약, 질의응답 등 다양한 태스크에 활용
+- Fine-tuning(미세조정) 및 datasets 라이브러리로 커스텀 데이터셋 적용 용이
+
+5. 실습: 영화평 분류(감정분석) 모델
+- IMDB 등 영화평 데이터셋 사용(학습/평가 각 25,000개)
+- BERT, RoBERTa, DistilBERT 등 트랜스포머 기반 모델이 많이 사용됨
+- 예시 코드(pipeline):
+from transformers import pipeline
+sentiment_analysis = pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english")
+reviews = [ ... ]  # 여러 영화평
+results = sentiment_analysis(reviews)
+for review, result in zip(reviews, results):
+    print(f"Review: {review}\nSentiment: {result['label']} with score {result['score']:.2f}")
+- Keras+TensorFlow 기반으로 MultiHeadAttention, PositionalEncoding 등 직접 구현 가능
+
+6. 핵심 요약
+- 트랜스포머/어텐션 구조는 RNN/LSTM 한계를 극복, 병렬처리·성능 향상
+- 허깅페이스 라이브러리로 실제 감정분석, 텍스트 분류 등에 쉽게 적용 가능
+- 자연어처리 실무/연구에서 최신 표준
+
+[끝]
