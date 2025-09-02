@@ -1,7 +1,5 @@
 # [KDT] 기업맞춤형 AI+X 융복합 인재 양성 공부일지
 
-**⚠️ 본 레파지토리는 🔴  `수료일(2025.09.02)` 🔴 에 사라질 예정이니 필요한 데이터는 미리 다운로드 해 주세요! ⚠️**
-
 
 # 공부 일지 내용
 <img width="628" height="893" alt="Image" src="https://github.com/user-attachments/assets/9b21eada-fba3-40a6-9d6c-9354f866c56a" />
@@ -14,18 +12,21 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
+![Upstage](https://img.shields.io/badge/Upstage-FF6B35?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==&logoColor=white)
 ![HuggingFace](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
 ![LLM](https://img.shields.io/badge/LLM-9B59B6?style=for-the-badge&logo=openai&logoColor=white)
 ![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
 
 </div>
 
-### 🗄️ **Database**
+### 🗄️ **Database & Vector DB**
 <div align="center">
 
 ![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![Pinecone](https://img.shields.io/badge/Pinecone-000000?style=for-the-badge&logo=pinecone&logoColor=white)
 
 </div>
 
@@ -50,10 +51,20 @@
 
 </div>
 
-### 🔧 **Tools**
+### 🔧 **Tools & Environment**
 <div align="center">
 
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Anaconda](https://img.shields.io/badge/Anaconda-44A833?style=for-the-badge&logo=anaconda&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+
+</div>
+
+### 📄 **Document & Data Processing**
+<div align="center">
+
+![PyMuPDF](https://img.shields.io/badge/PyMuPDF-FF2D20?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white)
 
 </div>
