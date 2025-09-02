@@ -6,57 +6,54 @@
 # 공부 일지 내용
 <img width="628" height="893" alt="Image" src="https://github.com/user-attachments/assets/9b21eada-fba3-40a6-9d6c-9354f866c56a" />
 
-# 📚 SKIL
- ### Programming
-<div>
-  <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> 
+# 📚 기술 스택
+
+### 🐍 **Programming & AI**
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![HuggingFace](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![LLM](https://img.shields.io/badge/LLM-9B59B6?style=for-the-badge&logo=openai&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
+
 </div>
 
- ### AI
-<div>
-  <img src="https://img.shields.io/badge/DeeepLearning(tensorflow)-ff00ff?style=for-the-badge&logo=DeeepLearning&logoColor=black">
-  <img src="https://img.shields.io/badge/MachineLearning(sklearn)-55ff55?style=for-the-badge&logo=MachineLearning&logoColor=white">
-  <img src="https://img.shields.io/badge/LLM-55ff55?style=for-the-badge&logo=LLM&logoColor=white">
-  <img src="https://img.shields.io/badge/HuggingFace-F7DF1E?style=for-the-badge&logo=HuggingFace&logoColor=black">
-  <img src="https://img.shields.io/badge/Ollama-55ff55?style=for-the-badge&logo=Ollama&logoColor=white">
+### 🗄️ **Database**
+<div align="center">
+
+![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+
 </div>
 
- ### DBMS 
-<div>
-  <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
-  <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
-  <img src="https://img.shields.io/badge/sqlite-447900?style=for-the-badge&logo=sqlite&logoColor=white">
+### 🌐 **Web Development**
+<div align="center">
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
+![JSP](https://img.shields.io/badge/JSP-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+
 </div>
 
- ### WEB
- <div>
-  <img src="https://img.shields.io/badge/html-E34F26?style=for-the-badge&logo=html5&logoColor=white">
-  <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">
-  <img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">
-  <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
-  <img src="https://img.shields.io/badge/jquery-0769AD?style=for-the-badge&logo=jquery&logoColor=white">
+### ⚡ **Frameworks**
+<div align="center">
+
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+
 </div>
 
- ### WEB programming
-<div> 
-  <img src="https://img.shields.io/badge/JSP-db46ca?style=for-the-badge&logo=eclipse&logoColor=white">
+### 🔧 **Tools**
+<div align="center">
+
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+
 </div>
-
- ### WEB Framework
-<div>
-  <img src="https://img.shields.io/badge/fastapi-FF0000?style=for-the-badge&logo=fastapi&logoColor=white">
-  <img src="https://img.shields.io/badge/flask-000000?style=for-the-badge&logo=flask&logoColor=white">
-  <img src="https://img.shields.io/badge/django-FCC624?style=for-the-badge&logo=django&logoColor=black"> 
-</div>
-
- ### git
- <div>
-  <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
-  <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
- </div>
-
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=comlec&show_icons=true&theme=radical)
-
-
-
-
